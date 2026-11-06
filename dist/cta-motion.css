@@ -1,0 +1,31 @@
+/* Shared tactile response, with each control retaining its own visual treatment. */
+:is(.home-hotspot,.theme-controls button,.theme-controls select,.chill-controls button,#weather,#workspace button,#workspace .profile-links a,.image-preview button){
+ --cta-shadow:var(--pixel-ink,#1b1340);
+ transition:translate .18s cubic-bezier(.16,1,.3,1),box-shadow .18s cubic-bezier(.16,1,.3,1),filter .18s,background-color .18s;
+ -webkit-tap-highlight-color:transparent;
+}
+#workspace.book-mode :is(button,.profile-links a){--cta-shadow:#49332a}
+@media(hover:hover){
+ :is(.home-hotspot,.theme-controls button,.theme-controls select,.chill-controls button,#weather,#workspace button,#workspace .profile-links a,.image-preview button):not(:disabled):hover{
+  translate:-2px -2px;box-shadow:5px 5px 0 var(--cta-shadow);filter:brightness(1.06);
+ }
+ .home-hotspot:hover{animation-play-state:paused}
+ /* Replace previous transform-based lift so responses do not stack. */
+ #workspace .case-pager button:hover,#backRoom:hover{transform:none}
+}
+:is(.home-hotspot,.theme-controls button,.theme-controls select,.chill-controls button,#weather,#workspace button,#workspace .profile-links a,.image-preview button):not(:disabled):active{
+ translate:2px 2px;box-shadow:1px 1px 0 var(--cta-shadow);filter:brightness(.97);
+}
+#workspace .case-pager button:active,#backRoom:active{transform:none}
+:is(.home-hotspot,.theme-controls button,.chill-controls button,#weather,#workspace button,#workspace .profile-links a,.image-preview button):focus-visible{
+ outline:3px solid var(--pixel-mint,#2ee6a6);outline-offset:5px;
+}
+@media(prefers-reduced-motion:reduce){
+ :is(.home-hotspot,.theme-controls button,.theme-controls select,.chill-controls button,#weather,#workspace button,#workspace .profile-links a,.image-preview button){transition:none}
+ :is(.home-hotspot,.theme-controls button,.theme-controls select,.chill-controls button,#weather,#workspace button,#workspace .profile-links a,.image-preview button):is(:hover,:active){translate:none}
+}
+
+#themeTime:focus-visible {
+ outline: 0;
+ box-shadow: inset 0 0 0 2px var(--pixel-ink);
+}

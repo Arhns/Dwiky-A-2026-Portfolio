@@ -1,0 +1,15 @@
+#consoleGame{position:absolute;z-index:8;left:31%;top:65%;width:10%;height:15%;border:0;background:transparent;cursor:pointer;border-radius:8px}
+#consoleGame>span{position:absolute;left:0;bottom:0;background:var(--pixel-yellow);color:var(--pixel-ink);border:2px solid var(--pixel-ink);padding:6px;font:9px/1.4 'Press Start 2P',monospace;white-space:nowrap;box-shadow:3px 3px 0 #252525;transition:translate .18s,box-shadow .18s}
+#consoleGame:hover>span{translate:-2px -2px;box-shadow:5px 5px 0 #252525;background:var(--pixel-mint)}#consoleGame:active>span{translate:2px 2px;box-shadow:1px 1px 0 #252525}#consoleGame:focus-visible{outline:3px solid var(--pixel-mint);outline-offset:4px}
+.console-dialog{position:fixed;inset:0;width:100vw;height:100dvh;max-width:none;max-height:none;margin:0;padding:16px;border:0;border-radius:0;background:transparent;overflow:hidden;color:var(--pixel-paper)}
+.console-dialog::backdrop{background:#252525bb;backdrop-filter:blur(4px)}
+.console-panel{height:100%;max-width:1400px;margin:auto;border:4px solid var(--pixel-paper);border-radius:18px;overflow:hidden;background:var(--pixel-bg);display:flex;flex-direction:column;box-shadow:6px 6px 0 #252525}
+.console-panel .console-bar{display:flex;align-items:center;gap:16px;justify-content:space-between;flex-shrink:0;height:auto;margin:0;padding:12px 16px;border:0;background:var(--pixel-lime);color:var(--pixel-ink)}
+.console-bar strong{font:10px/1.5 'Press Start 2P',monospace}.console-nav{display:flex;gap:16px;align-items:center;padding:10px 14px;flex-shrink:0}.console-nav span{font:13px 'Space Grotesk',sans-serif}.console-nav a{margin-left:auto;color:var(--pixel-paper);font-size:12px}
+.console-bar button,.console-nav button{background:var(--pixel-paper);color:var(--pixel-ink);border:2px solid var(--pixel-ink);border-radius:7px;box-shadow:3px 3px 0 #252525;padding:9px 12px;font:9px/1.5 'Press Start 2P',monospace;transition:translate .18s,box-shadow .18s}.console-bar button:hover,.console-nav button:hover{translate:-2px -2px;box-shadow:5px 5px 0 #252525;background:var(--pixel-mint)}.console-bar button:active,.console-nav button:active{translate:2px 2px;box-shadow:1px 1px 0 #252525}
+.console-screen{position:relative;flex:1;min-height:0;background:#252525}.console-screen iframe{width:100%;height:100%;display:block;border:0}.console-loading{padding:30px;text-align:center}
+@media(max-width:600px){.console-dialog{padding:6px}.console-nav{gap:8px;padding:8px}.console-nav span{display:none}.console-nav a{font-size:10px}#consoleGame>span{font-size:7px;padding:4px}}
+@media(prefers-reduced-motion:reduce){#consoleGame>span,.console-bar button,.console-nav button{transition:none}}
+.console-bar .console-close{border:3px solid var(--pixel-ink);border-radius:10px;padding:10px;font:9px/15px "Press Start 2P",monospace;box-shadow:3px 3px 0 var(--pixel-ink)}
+#consoleGame{left:32%;top:65%;width:8%;height:14%;clip-path:polygon(0 0,100% 16%,100% 100%,0 83%)}
+#consoleGame:focus-visible{clip-path:none;outline:3px solid var(--pixel-mint)}
