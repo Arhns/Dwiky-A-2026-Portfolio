@@ -1,0 +1,22 @@
+.project-card .project-cover{display:block;height:auto;aspect-ratio:1.4;background:none}
+.mockup-stage{position:relative;display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:1.4;overflow:hidden;isolation:isolate;background:#efdfa9}
+.family-bananas{background:#ece7b8}.family-tokopedia{background:#d7e8da}.family-graphic{background:#eadfc9}
+.mockup-stage:before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,#fff7 0%,transparent 55%,#25252512 100%);z-index:-1}
+.mockup-orbit{position:absolute;width:85%;aspect-ratio:1;border:1px solid #25252516;border-radius:50%;translate:25% 28%;z-index:-1}
+.mockup-device{position:relative;display:block;flex:none;filter:drop-shadow(9px 13px 8px #25252526);transition:transform .45s cubic-bezier(.16,1,.3,1)}
+.mockup-screen{display:block;overflow:hidden;background:#fff}
+.project-card .project-cover .mockup-screen img,.case-hero .mockup-screen img,.mockup-preview .mockup-screen img{display:block;width:100%;height:100%;max-width:none;max-height:none;margin:0;object-fit:cover;object-position:top;transform:none}
+.mockup-phone .mockup-device{height:87%;aspect-ratio:.49;background:#252525;border:3px solid #252525;border-radius:18px;box-shadow:inset 0 0 0 1px #fff5;transform:rotate(-7deg)}
+.mockup-phone .mockup-screen{position:absolute;inset:3px;border-radius:13px}
+.mockup-phone .mockup-device:after{content:'';position:absolute;top:5px;left:35%;width:30%;height:5px;border-radius:6px;background:#252525}
+.mockup-browser .mockup-device{width:84%;aspect-ratio:1.48;border:3px solid #252525;border-radius:7px;background:#252525;transform:rotate(-3deg)}
+.mockup-browserbar{display:flex;align-items:center;gap:3px;height:13px;padding:0 5px;background:#252525}
+.mockup-browserbar i{width:3px;height:3px;background:#fff1d6;border-radius:50%}.mockup-browserbar>span{width:45%;height:4px;margin:auto;background:#fff1d629;border-radius:3px}
+.mockup-browser .mockup-screen{position:absolute;inset:13px 0 0;border-radius:0 0 4px 4px}
+.mockup-browser .mockup-screen img{object-fit:contain!important;background:#fff}
+.mockup-brand .mockup-device{width:84%;aspect-ratio:2/1;padding:8px;background:#fff1d6;transform:rotate(-4deg);border:1px solid #25252525;box-shadow:5px 5px 0 #25252512}
+.mockup-brand .mockup-screen{height:100%}.mockup-brand .mockup-screen img{object-fit:contain!important}
+.case-hero .mockup-stage{aspect-ratio:1.4}.case-hero .mockup-phone .mockup-device{border-width:5px;border-radius:30px}.case-hero .mockup-phone .mockup-screen{inset:5px;border-radius:23px}.case-hero .mockup-phone .mockup-device:after{top:9px;height:8px}
+.mockup-preview .mockup-stage{max-width:1100px;margin:0 auto}.mockup-preview .mockup-phone .mockup-device{border-radius:32px;border-width:5px}.mockup-preview .mockup-phone .mockup-screen{border-radius:25px;inset:5px}
+@media(hover:hover){.project-card:hover .mockup-device{transform:translateY(-3px) rotate(0deg)}}
+@media(prefers-reduced-motion:reduce){.mockup-device{transition:none}.project-card:hover .mockup-device{transform:none}}
